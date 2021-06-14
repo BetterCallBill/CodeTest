@@ -7,7 +7,7 @@ namespace CodeTest
     // BinaryGap
     public class CyclicRotation
     {
-        static void Main()
+        static void CyclicRotationMain()
         {
             int[] x = { };
             int k = 1;
@@ -50,11 +50,16 @@ namespace CodeTest
 
             for (int i = 0; i < K; i++)
             {
+                // 0  1  2  3  4
+                // 3, 8, 9, 7, 6
                 int last = A[A.Length - 1];
+
+                // 后一个数 = 前一个数
                 for (int j = A.Length - 1; j > 0; j--)
                 {
                     A[j] = A[j - 1];
                 }
+
                 A[0] = last;
             }
 
